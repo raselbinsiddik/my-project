@@ -1,16 +1,36 @@
-<!dotype html>
+<!DOCTYPE html>
 <html>
-    <head> <title>how to use margin and padding.</title>
+  <head>
+    <title>pseudo class and elements.</title>
     <style>
-        section1{background-color:aqua}
+      .demo p:nth-child(n + 1) {
+        background-color: brown;
+        color: blue;
+        border-radius: 10px;
+      }
+      p::first-letter {
+        color: aqua;
+        font-size: 2.5em;
+      }
+      p::after {
+        content: ">";
+      }
     </style>
-    </head>
-    <body>
-<div id="section1">
-<h1>
-    Bangladesh is awonderful country.
-</h1>
-
-
-    </body>
-    </html>
+  </head>
+  <body>
+    <div class="demo">
+      <p>
+        we are muslim.Allah is our creater.Bangladesh is my country.It has large
+        population.
+      </p>
+      <p>
+        America is a dirty country.Becouse they are not follow Holy Quran and
+        hadith.
+      </p>
+      <p>
+        Muslim always afright to Allah in there every work.they will always
+        follow holy Quran and hadith.
+      </p>
+    </div>
+  </body>
+</html>
