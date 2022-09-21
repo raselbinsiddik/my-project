@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head><title>
+        z-index and css3 veriables.
+    </title>
+    <style>
+        :root{--primary-color:aqua;--secodary-color:blue;}
+        div{height: 300px;
+        width:300px}
+        #div1{background: var(--primary-color);position: absolute;
+        z-index:1; font-size: large;}
+        #div2{background: var(--secondary-color,blue);position: absolute;left:200px; top:150px;z-index:2;font-size: 40px;}
+    </style>
+    </head>
+    <body>
+        <div id="div1">Hello Bangladesh</div>
+        <div id="div2">Hello Pakistan</div>
+    </body>
+</html>
