@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>exercise grid layout.</title>
+        <style>
+            h1{text-align: center;
+            color: blue;}
+            .grid-container{
+                display: grid;
+               grid-template-columns: auto auto auto auto auto auto; text-align: center;}
+               .grid-container>div{background-color: grey;
+                border: 1px black solid;
+                font-size: 1.5rem;
+                color: aqua;
+            }
+            .item1{grid-column-start: 1;
+            grid-column: 1/6;
+            text-align: center;
+            padding: 10px;}
+            .item2{text-align: center;
+                grid-column: 1/2;
+            padding: 10px;
+            grid-row:2/4;}
+            .item3{grid-column: 2/6;
+              padding: 10px;}
+              .item4{grid-column: 6/7;
+            grid-row: 1/4;}
+              .item5{grid-column: 2/6; padding: 10px;}
+        </style>
+    </head>
+    <body>
+        <h1>Grid layout exercise</h1>
+        <div class="grid-container">
+            <div class="item1">Header</div>
+            <div class="item2">Menu</div>
+            <div class="item3">Main</div>
+            <div class="item4">Aside</div>
+            <div class="item5">Footer</div>
+        </div>
+    </body>
+</html>
