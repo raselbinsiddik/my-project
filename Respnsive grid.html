@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Responsive grid.
+        </title>
+        <style>
+            *{box-sizing: border-box ;}
+           .column{float:left;
+            width: 25%;
+            padding:10px;
+           } 
+           @media screen and (max-width:1000px){
+            .column{float:left;
+            width: 50%;
+            background-color: blue;
+           color: bisque;}
+           }
+           @media  screen and (min-width:800px){.column{background-color: black; 
+           width: 100%; 
+           color:aliceblue;
+           }}
+    
+    </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="column">
+                <h1>Html</h1>
+                <p>Html, its full name is Hyper Text Markup languege.It is the head of the web devolopment.</p>
+            </div>
+            <div class="column">
+             <h1>Css</h1>
+             <p>
+                Css,its full name is Cascading Style Sheets.Its use for web design and style.
+             </p>
+            </div>
+            <div class="column">
+                <h1>Js</h1>
+                <p> 
+                    Javascipt is very important for web design.its improove to make web design.
+                </p>
+            </div>
+            <div class="column">
+                <h1>Bootstrap</h1>
+                <p>Bootstrap is as a part of web devolopment.Its make a design easily.</p>
+            </div>
+        </div>
+    </body>
+</html>
