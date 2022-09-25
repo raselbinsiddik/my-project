@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dropdown menu.</title>
+    <style>
+        .navbar{background-color:royalblue;
+              height: 40px;
+            border:5px burlywood solid;
+        text-align: center;
+        
+        margin-top: 10px;}
+        .navbar a{font-size: 1.2rem;
+            color:white;
+            padding: 10px 20px;
+            cursor:pointer;
+        
+         }
+         .dropdown-container{display:inline ;
+        position: relative;}
+        .dropdown-content{position: absolute;
+            top: 30px;
+            right:0px;
+            background-color: lawngreen;
+            text-align: left;
+            min-width: 100px;
+            border-radius: 5px;
+            display: none;
+        
+        }
+        .dropdown-content a{display: block;   
+        }
+        .dropdown-content:hover{background-color: gray;}
+        .dropdown-container:hover .dropdown-content{display: block;}
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="#">Home</a>
+      <a href="#">Tutorial</a>
+      <div class="dropdown-container">
+      <a href="#">Contact Me</a>
+      <div class="dropdown-content">
+      <a href="#">Facebook</a>
+      <a href="#">Email</a>
+      </div>
+      </div>
+      <a href="#">About Me</a>
+    </div>
+  </body>
+</html>
