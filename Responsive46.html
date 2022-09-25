@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Responsive.
+        </title>
+        <style>
+            .menu{background-color: cadetblue;
+            display: flex;
+            justify-content: flex-end;}
+            .menu a{text-decoration: none;
+                   padding:10px ;
+                   color: white;   
+                }
+                .menu a:hover{background-color: blue;}
+                @media screen and (max-width:700px){
+                    .menu{flex-direction:column;
+                    padding: 20px;}
+                }
+                .menu a{background-color: purple;
+                margin: 10px 0;
+            border-radius: 20px;
+               text-align:center}
+
+        </style>
+    </head>
+    <body>
+        <div class="menu">
+            <a href="#">Bangladesh</a>
+            <a href="#">Pakistan</a>
+            <a href="#">Afganistan</a>
+            <a href="#">Turkistan</a>
+            <a href="#">Those are muslim country</a>
+
+        </div>
+    </body>
+</html>
