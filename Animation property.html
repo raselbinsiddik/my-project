@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animatoin property</title>
+    <style>img{height: 200px;max-width: 200px;
+    margin: 0 auto;
+    display:block ;
+    margin-top: 100px;
+    border-radius: 50%;
+    border:10px yellow solid;}
+    img:hover{
+      animation-name: img-anim;
+      animation-duration: 5s;
+      animation-fill-mode:forwards;
+      
+    }
+    @keyframes img-anim{
+      from{opacity: 1;}
+      to{opacity: 0.5;}
+      from{max-width: 200px;
+      border-color: blue;}
+      to{max-width: 400px;border-color: red;}
+    }
+    </style>
+  </head>
+  <body>
+    <img src="./public/download (1).jpg">
+    
+
+  </body>
+</html>
