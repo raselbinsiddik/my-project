@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            table design.
+        </title>
+        <style>
+           table{
+                border:2px solid black;
+                border-collapse: collapse;
+                width: 100%;
+            } 
+           th,td{border:2px black solid;
+                    text-align: center;
+                    padding: 10px;}
+           th{
+            background-color: blue;
+             color: white;
+              height: 30px;}
+             tr:nth-child(even){
+            background-color: yellow;
+         }
+         tr:nth-child(odd){background-color: gray;}  
+         tr:hover{background-color: aqua;
+                  cursor: pointer;}
+    
+       
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>Student Details</caption>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Gpa</th>
+                <th>Phone</th>
+                <th>Bio</th>
+            </tr>
+            <tr>
+                <td>3892</td>
+                <td>Anisul</td>
+                <td>3.90</td>
+                <td>01879839555</td>
+                <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
+            </tr>
+            <tr>
+                <td>3898</td>
+                <td>Rabeya</td>
+                <td>3.90</td>
+                <td>01879839559</td>
+                <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
+            </tr>
+            <tr>
+                <td>3895</td>
+                <td>Shopik</td>
+                <td>4.90</td>
+                <td>01879839599</td>
+                <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
+            </tr>
+            <tr>
+                <td>3894</td>
+                <td>Asad</td>
+                <td>4.55</td>
+                <td>0187983990</td>
+                <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
+            </tr>
+            <tr>
+                <td>3889</td>
+                <td>Billal</td>
+                <td>2.90</td>
+                <td>01879839598</td>
+                <td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</td>
+            </tr>
+        </table>
+    </body>
+</html>
