@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Form style
+        </title>
+        <style>
+            select{
+                background-color:red;
+                width: 50%;
+                cursor: pointer;
+                padding: 10px;
+            }
+            textarea{
+                border: 2px gray solid;
+                border-radius: 10px;
+            }
+            input[type=button],input[type=reset]{
+                width: 100px;
+                background-color: red;
+                color: aliceblue;
+                padding: 10px;
+                margin: 5px;
+                cursor: pointer;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="">
+         <select name="subject_name" id="subjects">
+            <option value="c">C program</option>
+            <option value="c++">C++ program</option>
+            <option value="java">Java program</option>
+         </select>
+         <p></p>
+         <textarea name="" id="" cols="40" rows="10">Write your comments here.</textarea>
+         <p></p>
+         <input type="button" value="Submit">
+         <input type="reset" value="Reset"> 
+        </form>
+    </body>
+</html>
