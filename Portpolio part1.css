@@ -1,0 +1,360 @@
+*{
+    box-sizing: border-box;
+    font-family:  'Fira Sans', sans-serif;
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+body{
+    margin: 0;
+}
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+a{
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.dotted-hr{
+    border: dotted 6px white;
+    border-bottom: none;
+    margin: 0 auto;
+    width: 70px;
+
+}
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+/*form mobile*/
+[class*="col-"]{
+    width: 100%;
+}
+
+.navbar{
+    background-color: #0c6168;
+    padding: 1% 7%;
+    text-align: center;
+}
+.navbar h1{
+    color: white;
+    margin: 0;
+    padding-top:10px ;
+}
+.navbar-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+.navbar-menu a{
+   background-color: cadetblue; 
+   border-radius: 10px;  
+   margin: 10px 10px;
+   padding: 10px;
+}
+.navbar-menu a:hover{
+    background-color:aquamarine;
+}
+.navbar::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/*profile*/
+.profile{
+    padding: 130px 10px;
+    position: relative;
+    text-align: center;
+
+}
+.profile .top-weather-icon{
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    transition: transform 2s;
+}
+.top-weather-icon:hover{
+    transform: rotate(360deg);
+}
+.profile-desc h1{
+  font-family: 'Satisfy', cursive;
+  font-size: 3rem; 
+}
+.profile-desc p{
+    color: gray;
+    margin: 0 auto 20px;
+    text-align: center;
+    width: 90%;
+}
+.profile .bottom-weather-icon{
+    position: absolute;
+    left: 60px;
+    bottom: 20px;
+    transition: transform 2s;
+}
+.bottom-weather-icon:hover{
+    transform: rotate(360deg);
+}
+.profile::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/*about me*/
+.about-me{
+    background-color: #0c6168;
+    padding: 1% 7%;
+    color: white;
+    text-align: center;
+}
+.aboutme-image img{
+    border: 5px white solid ;
+    border-radius: 50%;
+    height: 220px;
+    width: 200px;
+}
+.aboutme p{
+    text-align: center;
+}
+
+.cv-button{
+    background-color: #0872;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.about-me::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/*professional*/
+.professional-experience{
+ padding: 1% 0%;
+}
+.professional-experience .card{
+    background-color: #86b986;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0s;
+    height: 700px;
+}
+.card:hover{
+    box-shadow: 0 3px 4px 5px black ;
+}
+.card-icon{
+    text-align: center;
+}
+.card-icon img{
+    margin-top: 20px;
+    width: 100px;
+}
+.rounded-img{
+    border: 5px solid white;
+    border-radius: 50%;
+    padding: 15px;
+}
+.card-title h2{
+    text-align: center; 
+    background-color: #0c6168;
+    padding: 10px;
+    color: white;
+    border-radius: 10px; 
+}
+.skills-container{
+    padding-right: 45px;
+}
+.skills-container li{
+    list-style-type: none;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: 30px 20px;
+    position: relative;
+}
+.skills-container li::before{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+
+    width: 100%;
+    height: 10px;
+    background-color: #0c6168;
+    border-radius: 10px;
+}
+.skills-container li::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+
+    width: 0%;
+    height: 10px;
+    background-color: pink;
+    border-radius: 10px;
+
+    animation-timing-function:linear ;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.skills-container li.html::after{
+    animation-name: html;
+}
+@keyframes html{
+    to{
+        width: 90%;
+    }
+}
+.skills-container li.css::after{
+    animation-name: css;
+}
+@keyframes css{
+    to{
+        width: 80%;
+    }
+}
+.skills-container li.javascript::after{
+    animation-name: javascript;
+}
+@keyframes javascript{
+    to{
+        width: 70%;
+    }
+}
+.skills-container li.bootstrap::after{
+    animation-name: bootstrap;
+}
+@keyframes bootstrap{
+    to{
+        width: 90%;
+    }
+}
+.skills-container li.jq::after{
+    animation-name: jq;
+}
+@keyframes jq{
+    to{
+        width: 90%;
+    }
+}
+.skills-container li.node::after{
+    animation-name: node;
+}
+@keyframes node{
+    to{
+        width: 90%;
+    }
+}
+.skills-container li.express::after{
+    animation-name: express;
+}
+@keyframes express{
+    to{
+        width: 90%;
+    }
+}
+.skills-container li.github::after{
+    animation-name: github;
+}
+@keyframes github{
+    to{
+        width: 70%;
+    }
+}
+.skills-container li.react::after{
+    animation-name: react;
+}
+@keyframes react{
+    to{
+        width: 60%;
+    }
+}
+.professional-experience::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/*achievement*/
+
+.achievement-contact{
+    padding: 1% 7%;
+    background-color: #0c6168;
+    color: white;
+}
+h2{
+    text-align: center;
+}
+.contact{
+    text-align: center;
+}
+.contact input,textarea{
+   width: 100%;
+   padding: 20px;
+   font-size: 1.3rem;
+   text-align: center;
+   border:none ;
+   border-radius: 10px;
+   resize: none;
+}
+.contact button{
+    border:none ;
+   background-color: blue; 
+   padding: 10px;
+   color: white;
+   border-radius: 5px;
+   cursor: pointer;
+   margin: 10px;
+   width: 100px;
+}
+.contact-links{
+    text-align:center ;
+}
+.media-buttons .btn{
+   border: none;
+   border-radius: 25px; 
+   cursor: pointer;
+   padding: 5px;
+   margin: 10px;
+   width: 50x;
+   background-color: white;
+   font-size: 32px;
+}
+.btn:hover{
+    background-color: gray;
+}
+.achievement-contact::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/*footer*/
+.footer{
+  background-color: black;
+  color: white;
+  padding: 20px;  
+  text-align: center;
+  font-size: larger;
+}
+.footer-menu a{
+  display: block;
+  margin: 10px 0;
+  font-size: 1.3rem;
+}
+.footer-menu a:hover{
+    background-color: gray;
+}
+.footer::after{
+  content: '';
+  display: table;
+  clear: both;
+}
