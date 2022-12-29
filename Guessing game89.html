@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Guessing game89.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+           <div class="card-title">
+            <h1>Guessing game</h1>
+           </div>
+           <div class="card-body">
+           <form>
+            <div class="form-field">
+                <label for="guessingNumber">Guess a naumber between 1-5:</label>
+                <input type="number" id="guessingNumber" min="1" max="5" required>
+            </div>
+            <div class="buttons">
+                <button id="check" type="submit" class="btn">check result</button>
+            </div>
+           </form>
+           <p class="resultText"></p>
+           <p class="remainingAttempts"></p>
+           </div> 
+        </div>
+    </div>
+    <script>
+       
+       // initializing some values
+       // initializing some values
+let totalAttempts = 5;
+let attempts = 0;
+let totalWons = 0;
+let totallosts = 0;
+
+// finding elements
+const form = document.querySelector("form");
+const cardBody = document.querySelector(".card-body");
+const guessingNumber = form.querySelector("#guessingNumber");
+const checkButton = form.querySelector("#check");
+const resultText = cardBody.querySelector(".resultText");
+const lostWonMessage = document.createElement("p");
+const remainingAttempts = cardBody.querySelector(".remainingAttempts");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  attempts++;
+  if (attempts === 5) {
+    guessingNumber.disabled = true;
+    checkButton.disabled = true;
+  }
+  if (attempts < 6) {
+    let guessNumber = Number(guessingNumber.value);
+    checkResult(guessNumber);
+    remainingAttempts.innerHTML = `Remaining attempts: ${
+      totalAttempts - attempts
+    }`;
+  }
+  guessingNumber.value = "";
+});
+
+function checkResult(guessingNumber) {
+  const randomNumber = getRandomNumber(5);
+  if (guessingNumber === randomNumber) {
+    resultText.innerHTML = `you have won`;
+    totalWons++;
+  } else {
+    resultText.innerHTML = `you have lost; random number was: ${randomNumber}`;
+    totallosts++;
+  }
+  lostWonMessage.innerHTML = `Won: ${totalWons}, Lost: ${totallosts}`;
+  lostWonMessage.classList.add("large-text");
+  cardBody.appendChild(lostWonMessage);
+}
+
+function getRandomNumber(limit) {
+  return Math.floor(Math.random() * limit) + 1;
+}
+        
+    </script>
+</body>
+</html>

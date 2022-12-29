@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>click me</button>
+    <script>
+        /*unction  square(x) {
+            console.log(`square of ${x}: ${x * x}`);
+        }
+
+        const y =square;
+        y(5);
+
+        function higherOrderFunction(num, callback){
+             callback(num)
+        }
+
+        higherOrderFunction(6,square)*/
+
+
+        const taskOne =(callback)=>{
+            console.log("Task1");
+            callback();
+        };
+            
+        const taskTwo =(callback)=>{
+            setTimeout(() => {
+                console.log("Task2. Data Loading");
+                callback();
+            }, 3000);
+        }
+        const taskThree =(callback)=>{
+            console.log("Task3");
+            callback();
+        };
+        const taskFour =(callback)=>{
+            console.log("Task4");
+            callback()
+        };
+        const taskFive =()=>{
+            console.log("Task5");
+        };
+
+        taskOne(() => {
+            taskTwo(() => {
+              taskThree(() => {
+               taskFour(() => {
+                taskFive()
+               }); 
+              });
+            });
+        });
+        console.log("hi")
+     document.querySelector("button").addEventListener('click', () =>{
+        console.log('button is clicked');
+     })
+     console.log("bye");
+
+    </script>
+</body>
+</html>

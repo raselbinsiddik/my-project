@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*let numbers =[11,22,33,44,55]
+        let[num1,num2,...z]=numbers
+        console.log(numbers)
+        console.log(z)*/
+
+       //swap
+       /* let a=22, b=33;
+        [a,b]=[b,a]
+
+        console.log(a)
+        console.log(b)*/
+
+
+      //nested object
+        /*const studentsInfo={
+            id:111,
+            fullName:'Anisul islam',
+            gpa:4.44,
+            languages:{
+                native:'bangla',
+                beginer:'english'
+            }
+        }
+        const{id,fullName,languages}=studentsInfo
+         
+        console.log(id)
+        console.log(languages.native)
+        console.log(fullName)*/
+
+
+        const studentsInfo=({id,fullName})=>{
+            console.log(`${id},${fullName}`)
+        }
+
+        const student={
+         id:111,
+         fullName:'anisul',   
+        }
+
+        studentsInfo(student)
+
+        
+
+
+
+    </script>
+</body>
+</html>

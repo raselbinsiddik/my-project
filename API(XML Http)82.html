@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>API calling in js</h1>
+    <script>
+     console.clear();
+
+     const makeRequest=(method, url,data)=>{
+        const xhr= new XMLHttpRequest();
+        xhr.open(method,url);
+
+        xhr.setRequestHeader('Content-Type','application/json')
+
+        xhr.onload = () =>{
+            let data = xhr.response;
+            console.log(JSON.parse(data))
+        }
+
+        xhr.onerror=()=>{
+            console.log('error is here');
+        }
+        xhr.send(JSON.stringify(data));
+     }
+
+     const getData = () =>{
+       makeRequest ('GET','https://jsonplaceholder.typicode.com/posts');
+     } 
+
+     const sendData = () =>{
+       makeRequest ('POST','https://jsonplaceholder.typicode.com/posts',{
+        title:'foo',
+        body:'bar',
+        userId:1,
+       });
+     } 
+     
+     const updateData = () =>{
+       makeRequest ('PUT','https://jsonplaceholder.typicode.com/posts/1',{
+        id:1,
+        title:'fooMA',
+        body:'barMA',
+        userId:1,
+       });
+     } 
+
+     const updateSingleData = () =>{
+       makeRequest ('PATCH','https://jsonplaceholder.typicode.com/posts/1',{
+        title:'this is changed',
+       });
+     } 
+     const deleteData = () =>{
+       makeRequest ('DELETE','https://jsonplaceholder.typicode.com/posts/1');
+     } 
+      deleteData();
+     
+     //updateSingleData();
+     
+     //sendtData();
+     //getData();
+    </script>
+</body>
+</html>

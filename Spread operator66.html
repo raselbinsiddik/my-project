@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function addNumbers(x,y,z) {
+            return x+y+z;
+        }
+        let numbers1=[1,2,3]
+        //console.log(addNumbers(...numbers));
+
+        //let numbers2=[5,6,...numbers]
+        let numbers2=[4,5,6];
+        let numbers=[...numbers1, ...numbers2];
+        
+        console.log(numbers);
+
+
+//spread
+
+       let p1={
+        name:"Anisul Islam",
+        age:"27"
+       } 
+       let p2={
+        nationality:"bangladesh",
+        occuption:"teacher"
+       }
+       let p ={...p1, ...p2};
+       console.log(p);
+    </script>
+</body>
+</html>
