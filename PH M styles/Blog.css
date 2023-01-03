@@ -1,0 +1,17 @@
+*{
+        margin: 5px;
+    }
+.blog{
+        border: 5px solid black;
+        border-radius: 10px;
+        margin: 5px;
+        padding: 20px;
+        width: 80%;
+        height: 400px;
+        font-family: sans-serif;
+        background-image: url('../public/developers1.png');
+        background-size: contain;
+        
+        /* background-position: top right; */
+        background-repeat:no-repeat;
+    }    
